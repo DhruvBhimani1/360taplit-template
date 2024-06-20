@@ -1,0 +1,426 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply box-border;
+    width: auto;
+    height: auto;
+}
+.black{
+  color: #000000 !important;
+}
+a {
+    font-family: Poppins, sans-serif;
+}
+
+.Exo {
+    font-family: "Excon", sans-serif;
+}
+
+p {
+    color: #646464 !important;
+    font-family: Poppins, sans-serif;
+    line-height: 1.62;
+}
+
+h1 {
+    font-family: Excon, sans-serif;
+}
+
+h4 {
+    font-family: "Excon", sans-serif;
+}
+
+/* hamburger  */
+#toggle {
+    display: none;
+  }
+  .hamburger {
+    position: absolute;
+    top: 5em;
+    right: 5%;
+    margin-left: -2em;
+    margin-top: -45px;
+    width: 2em;
+    height: 45px;
+    z-index: 5;
+  }
+  
+  .hamburger div {
+    position: relative;
+    width: 3em;
+    height: 7px;
+    border-radius: 3px;
+    background-color: black;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #bfbfc0;
+    top: -100%; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+  }
+  .nav-wrapper {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .hambuger {
+    text-align: left;
+    margin-left: 25%;
+  }
+  .hambuger a {
+    position: relative;
+    display: inline-block;
+    margin-top: 1.25em;
+    transition: color 0.2s ease-in-out;
+  }
+  .hambuger a:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0.25em;
+    background-color: white;
+    left: -0.5em;
+    transition: all 0.2s ease-in-out;
+  }
+  .hambuger a:hover {
+    color: white;
+  }
+  .hambuger a:hover:before {
+    height: 100%;
+  }
+  #toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+  }
+  #toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  #toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -7px;
+  }
+  
+  #toggle:checked + .hamburger + .nav {
+    top: 0;
+    transform: scale(1);
+  }
+/* hamburger  */
+.imagegallery img {
+    width: 100%;
+    height: auto;
+}
+
+.box-shadow:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 20%;
+    background-image: linear-gradient(to top, #efefef, rgba(0, 0, 0, 0));
+}
+
+.Inter-family {
+    font-family: Inter, sans-serif;
+}
+
+.elementor-heading-title {
+    @apply text-[#4F4F4F] text-lg font-semibold;
+    font-family: "Inter", Sans-serif;
+}
+
+.elementor-heading-title-2 {
+    @apply font-semibold;
+    font-size: 16px;
+    font-family: "Inter", Sans-serif;
+    color: #111111 !important;
+}
+
+.elementor-btn {
+    @apply font-semibold fill-white text-white bg-black rounded-[30px_30px_30px_30px] py-[12px] px-[24px];
+    font-family: "Inter", Sans-serif;
+}
+
+.border-for-prize-largescreen {
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    border-color: #CBCBCB;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.border-for-prize-2 {
+    border-style: solid;
+    border-width: 0px 1px 0px 1px;
+    border-color: #CBCBCB;
+}
+
+.border-for-last-prize {
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #CBCBCB;
+    border-radius: 0 25px 25px 0;
+}
+
+.border-for-last-prize-2 {
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-color: #CBCBCB;
+    border-radius: 0 0px 25px 25px;
+}
+
+.prize-bg-color {
+    background-image: linear-gradient(270deg, #FFFFFF 1%, #F4F4F4 5%);
+}
+
+@media only screen and (max-width: 768px) {
+    .border-for-prize-largescreen {
+
+        border-width: 1px 1px 1px 1px;
+        border-radius: 25px 25px 25px 25px;
+    }
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    border: 3px solid black;
+    border-radius: 50%;
+    left: 0;
+    background-color: #111111;
+}
+
+.box-bg {
+    @apply h-[300px] max-h-[300px];
+    transition: opacity 3s cubic-bezier(0.19, 1, 0.22, 1) 0ms,
+        transform 2s cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+    position: relative;
+}
+
+.box-bg::before {
+    z-index: 1;
+    opacity: 0.4;
+    content: "";
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: unset;
+}
+
+.box-bg img {
+    transition: transform 2.5s ease;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.5);
+}
+
+.box-bg:hover img {
+    transform: scale(1.5);
+}
+
+.line-shape:not(.line-shape-before):after {
+  content: "";
+  margin-left: 15px;
+}
+.line-shape:after{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 4vw;
+  height: 1px;
+  background: #2828281a;
+}
+
+.dns-effect::after {
+    z-index: 1;
+    opacity: 0.1;
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    mix-blend-mode: unset;
+}
+
+.circle {
+    @apply stroke-[#2828281a] transition-all duration-[0.6s] ease-[ease-in];
+    stroke-dasharray: 1px;
+}
+
+.swiper-pagination-bullet {
+    width: 20px !important;
+    height: 2px !important;
+    border-radius: 0 !important;
+    background-color: #000000 !important;
+}
+.Follow-icon{
+    @apply text-center w-[30px] leading-[30px] cursor-pointer whitespace-nowrap tracking-[2px] font-semibold text-xs;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+
+.Follow-icon::before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    border-left: 1px solid #fff;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.socials a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+.socials li a:hover i {
+  transform: scale(0);
+  transition: all 0.3s cubic-bezier(0.55,0.02,0.1,0.9);
+}
+.socials li a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-size: 13px;
+  opacity: 0;
+  transform-origin: center bottom;
+  cursor: pointer;
+  transform: translateX(0px) translateY(-50%);
+  transition: all 0.3s cubic-bezier(0.55,0.02,0.1,0.9);
+}
+.socials li a:hover span {
+  opacity: 1;
+  transform: translateX(10px) translateY(-50%);
+}
+.socials li a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background:white;
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(0.2);
+  transition: all 0.3s cubic-bezier(0.55,0.02,0.1,0.9);
+  border-color: #2828281a;
+}
+.socials li a:hover:after {
+  opacity: 1;
+  transform: translate(-50%,-50%) scale(1);
+  transition: all 0.5s cubic-bezier(0.75,-0.5,0,1.75);
+  transition-delay: 0.2s;
+}
+
+
+/* Button Styles */
+.dsn-btn {
+    position: relative;
+    transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition-property: transform, opacity;
+}
+.dsn-btn:hover {
+    transform: none;
+    opacity: 1;
+}
+.dsn-icon{
+  width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    z-index: 0;
+}
+.dsn-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    line-height: 7px;
+    border-radius: 50%;
+    border: 1px solid black;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: transform 0.45s cubic-bezier(0.65, 0, 0.076, 1), display 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+/* Hide dot on hover */
+.dsn-btn:hover .dsn-icon::after {
+    transform: scale(7.14); /* 50px / 7px */
+    display: none;
+}
+
+/* Link Styles */
+.dsn-btn a:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+/* Title Line Effect */
+.title-btn:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #2828281a;
+    transform-origin: right;
+    transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+.dsn-icon:hover {
+  width: 40px;
+  height: 40px;
+  line-height: 50px;
+  border-radius: 50px;
+  z-index: 0;
+  border: 0;
+}
+
+.dsn-btn:hover .title-btn:after {
+    transform: scale(0);
+}
+/* Increase the size of the dot when hovering */
+.dsn-btn:hover .dsn-icon::after {
+  display: none;
+}
+
+/* Change the icon color when hovering */
+.dsn-btn:hover .dsn-icon i {
+  color: black; /* Replace with your desired color */
+}
+
+/* Add a box shadow to the icon when hovering */
+.dsn-btn:hover .dsn-icon {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+}
+@media only screen and (max-width: 1000px) {
+  .hamburger-menu{
+    display: block !important;
+  }
+  .social-side{
+    display: none;
+  }
+}
